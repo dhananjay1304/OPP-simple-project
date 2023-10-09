@@ -16,5 +16,10 @@ const productList = {
       description: "expensive iphone with so much quality.",
     },
   ],
-  
+  render() {
+    const renderHook = document.getElementById('app');
+    const prodList =document.createElement('ul');
+    prodList.className = 'product-list'
+    renderHook.append()
+  }
 };
