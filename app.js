@@ -3,13 +3,15 @@ class Product {
   imageUrl;
   description;
   price;
+
+  someName() {}
+
+  someName2() {}
 }
- 
-console.log(new Product());
 
 const productList = {
   products: [
-    // new product(),
+    new product(),
     {
       title: "A pillow",
       imageUrl:
