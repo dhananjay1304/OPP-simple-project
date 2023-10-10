@@ -4,7 +4,7 @@ class Product {
   description;
   price;
 
-  comstructor(title, img, desc, price) {
+  constructor(title, img, desc, price) {
     this.title = title;
     this.imageUrl = img;
     this.description = desc;
@@ -14,26 +14,18 @@ class Product {
 
 const productList = {
   products: [
-    new product(
+    new Product(
       "A pillow",
       "https://th.bing.com/th/id/OIP.0GnNiIvrxcjFpGcejBgYBQAAAA?pid=ImgDet&rs=1",
       "A soft pillow!",
       19.99
     ),
-    {
-      title: "A pillow",
-      imageUrl:
-        "https://th.bing.com/th/id/OIP.0GnNiIvrxcjFpGcejBgYBQAAAA?pid=ImgDet&rs=1",
-      price: 19.99,
-      description: "A soft pillow!",
-    },
-    {
-      title: "iPhone",
-      imageUrl:
-        "https://o.aolcdn.com/images/dims?quality=100&image_uri=https:%2F%2Fs.aolcdn.com%2Fhss%2Fstorage%2Fmidas%2Fbe8deaf69ebb2e866257646588bb5999%2F206681111%2FIPHONE.jpg&client=amp-blogside-v2&signature=2e825ca996fd736b3f74c9a36a7bb87ea07cfa4d",
-      price: 99.98,
-      description: "Expensive iPhone with many features.",
-    },
+    new Product(
+      "iPhone",
+      "https://o.aolcdn.com/images/dims?quality=100&image_uri=https:%2F%2Fs.aolcdn.com%2Fhss%2Fstorage%2Fmidas%2Fbe8deaf69ebb2e866257646588bb5999%2F206681111%2FIPHONE.jpg&client=amp-blogside-v2&signature=2e825ca996fd736b3f74c9a36a7bb87ea07cfa4d",
+      "Expensive iPhone with many features.",
+      99.98
+    )
   ],
   render() {
     // Get the element with the id "app"
