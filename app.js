@@ -1,5 +1,15 @@
+class Product {
+  title = 'DEFAULT';
+  imageUrl;
+  description;
+  price;
+}
+ 
+console.log(new Product());
+
 const productList = {
   products: [
+    // new product(),
     {
       title: "A pillow",
       imageUrl:
@@ -10,7 +20,7 @@ const productList = {
     {
       title: "iPhone",
       imageUrl:
-        "https://th.bing.com/th/id/OIP.pI_mcb2vSdHcQzHBretQLAHaHa?w=169&h=180&c=7&r=0&o=5&pid=1.7",
+        "https://o.aolcdn.com/images/dims?quality=100&image_uri=https:%2F%2Fs.aolcdn.com%2Fhss%2Fstorage%2Fmidas%2Fbe8deaf69ebb2e866257646588bb5999%2F206681111%2FIPHONE.jpg&client=amp-blogside-v2&signature=2e825ca996fd736b3f74c9a36a7bb87ea07cfa4d",
       price: 99.98,
       description: "Expensive iPhone with many features.",
     },
