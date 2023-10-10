@@ -1,17 +1,25 @@
 class Product {
-  title = 'DEFAULT';
+  title = "DEFAULT";
   imageUrl;
   description;
   price;
 
-  someName() {}
-
-  someName2() {}
+  comstructor(title, img, desc, price) {
+    this.title = title;
+    this.imageUrl = img;
+    this.description = desc;
+    this.price = price;
+  }
 }
 
 const productList = {
   products: [
-    new product(),
+    new product(
+      "A pillow",
+      "https://th.bing.com/th/id/OIP.0GnNiIvrxcjFpGcejBgYBQAAAA?pid=ImgDet&rs=1",
+      "A soft pillow!",
+      19.99
+    ),
     {
       title: "A pillow",
       imageUrl:
@@ -29,16 +37,16 @@ const productList = {
   ],
   render() {
     // Get the element with the id "app"
-    const renderHook = document.getElementById('app');
+    const renderHook = document.getElementById("app");
 
     // Check if the element exists before proceeding
     if (renderHook) {
-      const prodList = document.createElement('ul');
-      prodList.className = 'product-list';
+      const prodList = document.createElement("ul");
+      prodList.className = "product-list";
 
       for (const prod of this.products) {
-        const prodEl = document.createElement('li');
-        prodEl.className = 'product-item';
+        const prodEl = document.createElement("li");
+        prodEl.className = "product-item";
         prodEl.innerHTML = `
           <div>
             <img src="${prod.imageUrl}" alt="${prod.title}">
@@ -61,6 +69,6 @@ const productList = {
 };
 
 // Call the render function after the page is loaded
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener("DOMContentLoaded", () => {
   productList.render();
 });
