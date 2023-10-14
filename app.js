@@ -1,66 +1,19 @@
-class Product {
-  title = "DEFAULT";
-  imageUrl;
-  description;
-  price;
-
-  constructor(title, img, desc, price) {
-    this.title = title;
-    this.imageUrl = img;
-    this.description = desc;
-    this.price = price;
+const product = [
+  {
+    title: "A beautiful girl",
+    imageUrl:
+      "https://th.bing.com/th/id/R.d22bece93393c5ba3402b145c1a338d5?rik=Bu1c3sv9ielK0w&riu=http%3a%2f%2f1.bp.blogspot.com%2f-DT3FkonsqY8%2fU6179nHA6PI%2fAAAAAAAALnA%2fuEcADFSZz5U%2fs1600%2fcute-and-beautiful-girls-wallpapers-058.jpg&ehk=LuVFBOScUePmWqFwS2pm1ulri5XRN%2fxQu3LNQXlIXso%3d&risl=&pid=ImgRaw&r=0",
+    price: 10.5,
+    description: "A good hearted girl!"
   }
-}
 
-const productList = {
-  products: [
-    new Product(
-      "A pillow",
-      "https://th.bing.com/th/id/OIP.0GnNiIvrxcjFpGcejBgYBQAAAA?pid=ImgDet&rs=1",
-      "A soft pillow!",
-      19.99
-    ),
-    new Product(
-      "iPhone",
-      "https://o.aolcdn.com/images/dims?quality=100&image_uri=https:%2F%2Fs.aolcdn.com%2Fhss%2Fstorage%2Fmidas%2Fbe8deaf69ebb2e866257646588bb5999%2F206681111%2FIPHONE.jpg&client=amp-blogside-v2&signature=2e825ca996fd736b3f74c9a36a7bb87ea07cfa4d",
-      "Expensive iPhone with many features.",
-      99.98
-    )
-  ],
-  render() {
-    // Get the element with the id "app"
-    const renderHook = document.getElementById("app");
+  {
+    title: "A handsome boyfriend",
+    imageUrl:
+      "https://th.bing.com/th/id/R.731447baf91c1159973050d329ffa9b1?rik=1PN%2fTJkM0ddEbA&riu=http%3a%2f%2fwww.worldstopmost.com%2fwp-content%2fuploads%2f2016%2f09%2f5615.jpg&ehk=Yn5hO3C8kYtK%2fj0ytsNBvtSExvNgcI5nBoJ4kJUVeCQ%3d&risl=&pid=ImgRaw&r=0",
+    price: 99.45,
+    description: "Stylish boy every time!"
+  }
+];
 
-    // Check if the element exists before proceeding
-    if (renderHook) {
-      const prodList = document.createElement("ul");
-      prodList.className = "product-list";
-
-      for (const prod of this.products) {
-        const prodEl = document.createElement("li");
-        prodEl.className = "product-item";
-        prodEl.innerHTML = `
-          <div>
-            <img src="${prod.imageUrl}" alt="${prod.title}">
-            <div class="product-item__content">
-              <h2>${prod.title}</h2>
-              <h3>$${prod.price}</h3>
-              <p>${prod.description}</p>
-              <button>Add to Cart</button>
-            </div>
-          </div>
-        `;
-        prodList.appendChild(prodEl);
-      }
-      // Append the prodList to the "app" element if it exists
-      renderHook.appendChild(prodList);
-    } else {
-      console.error('Element with id "app" not found.');
-    }
-  },
-};
-
-// Call the render function after the page is loaded
-window.addEventListener("DOMContentLoaded", () => {
-  productList.render();
-});
+const
